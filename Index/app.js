@@ -129,9 +129,55 @@ function compareSecondColumn(a, b) {
     }
 }
 
+//lowest 10 inflation rates
+function barGraph2(country) {
+    d3.json("http://127.0.0.1:5000/api/v1.0/global_inflation").then((data) => {
+
+        for (let i = 0; i < data.length; i++) {
+            let countryName = data[i].country
+            if (countryName == country) {
+                inflation = []
+                for (let j = 2005; j < 2023; j++) {
+                    inflation.push(["Year " + j, data[i]["year_" + j]]);
+                }
+                inflation.sort(compareSecondColumn).reverse();
+                let top10 = inflation.slice(0, 10);
+                let year = top10.map(function(tuple) {
+                    return tuple[0];
+                })
+                let inflationData = top10.map(function(tuple) {
+                    return tuple[1];
+                })
+
+
+
+                let barData = [{
+                    y: year.reverse(),
+                    x: inflationData.reverse(),
+                    type: "bar",
+                    orientation: "h"
+                }]
+                let barLayout = {
+                    title: "<b>Bottom 10 Inflation Info</b>",
+                    margine: {
+                        t: 50,
+                        l: 150
+                    }
+                }
+
+                Plotly.newPlot("bar3", barData, barLayout)
+
+
+            }
+        }
+    })
+
+}
+
 
 function optionChanged(country) {
     buildCharts(country);
     buildMetadata(country);
     barGraph(country);
+    barGraph2(country);
 }
