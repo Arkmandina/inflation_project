@@ -42,6 +42,8 @@ function buildMetadata(country) {
 
 // bar graph for inflation info
 function buildCharts(country) {
+    let selector = d3.select("#bar");
+    selector.html("")
     d3.json("http://127.0.0.1:5000/api/v1.0/global_inflation").then((data) => {
 
         xticks = ['2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022']
@@ -78,6 +80,8 @@ function buildCharts(country) {
 //Top 10 inflation info
 
 function barGraph(country) {
+    let selector = d3.select("#bar2");
+    selector.html("")
     d3.json("http://127.0.0.1:5000/api/v1.0/global_inflation").then((data) => {
 
         for (let i = 0; i < data.length; i++) {
@@ -131,6 +135,8 @@ function compareSecondColumn(a, b) {
 
 //lowest 10 inflation rates
 function barGraph2(country) {
+    let selector = d3.select("#bar3");
+    selector.html("")
     d3.json("http://127.0.0.1:5000/api/v1.0/global_inflation").then((data) => {
 
         for (let i = 0; i < data.length; i++) {
