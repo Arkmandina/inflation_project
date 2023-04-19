@@ -109,7 +109,7 @@ function barGraph(country) {
                     orientation: "h"
                 }]
                 let barLayout = {
-                    title: "<b>Top 10 Inflation Info</b>",
+                    title: "<b>Top 10 Inflation Years per Country</b>",
                     margine: {
                         t: 50,
                         l: 150
@@ -164,7 +164,7 @@ function barGraph2(country) {
                     orientation: "h"
                 }]
                 let barLayout = {
-                    title: "<b>Bottom 10 Inflation Info</b>",
+                    title: "<b>Bottom 10 Inflation Years per Country</b>",
                     margine: {
                         t: 50,
                         l: 150
