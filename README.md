@@ -1,8 +1,10 @@
-  WORLD COUNTRY’S INFLATION
+                                                        WORLD COUNTRY’S INFLATION
 INTRODUCTION
 
 Inflation affects all aspects of the economy, from consumer spending, business investment and employment rates to government programs, tax policies, and interest rates.
 Understanding inflation is crucial to investing because it can reduce the value of investment returns. With inflation rising recently after several years of relative calm to its highest level in four decades, investors may benefit from knowing the factors driving inflation, the impact on their portfolios, and steps to consider as the investment landscape shifts.
+
+![alt text](https://www.currencytransfer.com/wp-content/uploads/2022/08/Rising-Inflation.min_.jpg)
 
 
 WHAT IS INFLATION?
